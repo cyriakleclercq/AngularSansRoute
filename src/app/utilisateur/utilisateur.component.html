@@ -1,0 +1,17 @@
+<p>utilisateur works!</p>
+
+<div *ngFor="let user of users">
+
+    <input type="text" [(ngModel)]="user.name">
+
+    <div class="card">
+        L'utilisateur {{ user.name | uppercase }} a {{user.age}} ans <button (click)="sayHello(user.name)"> dites
+            bonjour </button>
+    </div>
+</div>
+
+<img [src]="img" alt="image de chat">
+
+<p>
+    {{ number | number:'1.3'}}
+</p>

@@ -1,0 +1,21 @@
+<p>formulaire-dynamique works!</p>
+
+<div>
+    <form (ngSubmit)="onSubmitTeam()" [formGroup]="myTeamForm">
+        <h3> Mon équipe </h3>
+
+        <div formArrayName="membres">
+            <div *ngFor="let member of members.controls; let i = index">
+                <label>
+                    Membre {{i+1}} :
+                    <input type="text" [formControlName]="i">
+                </label>
+            </div>
+
+            <button (click)="addNewMember()"> Ajouter un membre </button>
+
+        </div>
+
+        <button type="submit"> inscription </button>
+    </form>
+</div>

@@ -1,0 +1,39 @@
+<p>formulaire-de-base works!</p>
+
+<div>
+    <form (ngSubmit)="onSubmit()" [formGroup]="userProfileForm">
+        <h3> Identite </h3>
+        <label>
+            nom :
+            <input type="text" formControlName="nom">
+        </label>
+
+        <label>
+            prénom :
+            <input type="text" formControlName="prenom">
+        </label>
+
+        <div formGroupName="adresse">
+            <h3> Adresse </h3>
+
+            <label>
+                Numéro :
+                <input type="text" formControlName="numero">
+            </label>
+
+            <label>
+                Rue :
+                <input type="text" formControlName="rue">
+            </label>
+
+            <label>
+                Code postale :
+                <input type="text" formControlName="cp">
+            </label>
+        </div>
+
+        <button type="submit" [disabled]="!userProfileForm.valid">
+            Valider
+        </button>
+    </form>
+</div>

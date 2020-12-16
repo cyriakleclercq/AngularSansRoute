@@ -1,0 +1,8 @@
+img {
+  height: 50px;
+  width: auto;
+}
+
+#image {
+  background-image: url("https://www.18h39.fr/wp-content/uploads/2019/04/chat-trop-chou-1250x550.jpg");
+}
